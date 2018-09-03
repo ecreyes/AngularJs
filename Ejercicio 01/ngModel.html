@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="./js/lib/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ngModel</h1>
+        <hr>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Su nombre: {{nombre}}</label>
+              <div class="col-8">
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Ingrese su nombre"
+                  ng-model="nombre"
+                  >
+              </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">País: {{pais}}</label>
+              <div class="col-8">
+                  <select class="custom-select" ng-model="pais">
+                      <option value="" selected>Seleccione un país</option>
+                      <option value="1">Chile</option>
+                      <option value="2">Argentina</option>
+                      <option value="3">España</option>
+                  </select>
+              </div>
+        </div>
+        <div class="form-group">
+            <label class="col-4 col-form-label">Opciones seleccionadas: {{opt1}} {{opt2}}</label>
+              <div class="col-8">
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1" ng-model="opt1">
+                      <label class="custom-control-label" for="customCheck1">Opción 1</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2" ng-model="opt2">
+                      <label class="custom-control-label" for="customCheck2">Opción 2</label>
+                  </div>
+              </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Genero: {{genero}}</label>
+              <div class="col-8">
+                  <div class="custom-control custom-radio custom-control-inline">
+                      <input 
+                      type="radio" 
+                      id="customRadioInline1" 
+                      name="customRadioInline1"
+                      value="Hombre"
+                      ng-model="genero"
+                      class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1">Hombre</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input 
+                      type="radio" 
+                      id="customRadioInline2" 
+                      name="customRadioInline1" 
+                      value="Mujer"
+                      ng-model="genero"
+                      class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">Mujer</label>
+                    </div>
+              </div>
+        </div>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
