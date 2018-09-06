@@ -129,3 +129,36 @@ y en el html:
         </div>
 </div>
 ```
+
+## Ngshow
+Permite mostrar/ocultar un elemento:
+
+En el html,mostrar es una variable boolean del scope:
+```typescript
+<div class="container" ng-show="mostrar">
+```
+
+en el app.js
+```typescript
+app.controller('ninjaCtrl',function($scope){
+    $scope.ninja = ninjaData;
+    $scope.datos = {};
+    $scope.mostrar = false;
+
+    $scope.funcionEditar = function(){
+        angular.copy($scope.ninja,$scope.datos);
+        $scope.mostrar = true;
+    }
+
+    $scope.funcionGuardar = function(){
+        angular.copy($scope.datos,$scope.ninja);
+        $scope.mostrar = false;
+    }
+
+    $scope.funcionCancelar = function(){
+        $scope.datos = {};
+        $scope.mostrar = false;
+    }
+
+});
+```
