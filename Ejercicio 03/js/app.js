@@ -2,6 +2,7 @@ var app = angular.module('shinobiApp',[]);
 
 app.controller('listadoCtrl',['$scope',function($scope){
     $scope.arreglo = ["Eduardo","Pedro","Diego"];
+    $scope.reverse = false;
 
     $scope.lista = {
         profesores:[

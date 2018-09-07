@@ -47,3 +47,18 @@ El filter tiene que estar asociado a un input de ng-model como por ejemplo `ng-m
     </div>
     </div>
 ```
+
+## OrderBy
+Cuando se hace click en una columna se deben ordenar los datos.
+
+Al hacer click en una columna:
+```typescript
+<th scope="col"><a  href="" ng-click="columna='nombre';reverse = !reverse">Nombre</a></th>
+<th scope="col"><a  href="" ng-click="columna='sexo';reverse = !reverse">Sexo</a></th>
+```
+la variabe columna puede tomar dos valores y el reverse es un boolean que esta en el scope, por default es false.`$scope.reverse = false;`
+
+La magia ocurre en:
+```typescript
+<tr ng-repeat="data in personas | filter:buscar | orderBy:columna:reverse">
+```
