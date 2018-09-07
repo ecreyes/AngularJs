@@ -13,7 +13,28 @@
     <div class="container" ng-controller="mainCtrl">
         <h1>Http</h1>
         <hr>
-        {{profesores | json}}
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="prof in profesores">
+                    <td>{{prof.id}}</td>
+                    <td>{{prof.nombre}}</td>
+                    <td>{{prof.sexo}}</td>
+                    <td>{{prof.snombre}}</td>
+                    <td>{{prof.celular}}</td>
+                    <td>{{prof.telefono}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
